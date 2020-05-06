@@ -1,10 +1,15 @@
-var playlist = new Object({ artistName: 'songTitle' });
+var playlist = {
+  playlist: 'slowdive',
+  artistName: 'Phil Ochs',
+  songTitle: 'My Bloody Valentine'
+}
 
-function updatePlaylist('Slowdive', 'Phil Ochs', 'My Bloody Valentine') {
-   return Object.assign({}, playlist, { [artistName]: songTitle})
+function updatePlaylist(playlist, artistName, songTitle) {
+   playlist['Phil Ochs'] = 'My Bloody Valentine'
+   return playlist;
 }
 
 function removeFromPlaylist(playlist, artistName) {
-  delete playlist.artistName
-  return playlist
+  delete playlist[artistName];
+  return playlist;
 }
